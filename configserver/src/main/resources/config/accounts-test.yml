@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to NexusBank accounts related QA APIs "
+  contactDetails:
+    name: "Bhagya - QA Lead"
+    email: "bhagya@nexusbank.com"
+  onCallSupport:
+    - (666) 265-3765
+    - (666) 734-8371
