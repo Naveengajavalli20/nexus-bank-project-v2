@@ -36,3 +36,10 @@ logging:
       nexusbank:
         gatewayserver: DEBUG
 
+resilence4j.circuitbreaker:
+  configs:
+    default:
+      slidingWindowSize: 10
+      failureRateThreshold: 50
+      waitDurationInOpenState: 10000
+      permittedNumberOfCallsInHalfOpenState: 2
