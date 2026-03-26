@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.*;
         description = "REST APIs in NexusBank to FETCH customer details"
 )
 @RestController
-@RequestMapping(path = "/nexus-bank/customers", produces = {MediaType.APPLICATION_JSON_VALUE})
+@RequestMapping(path = "/v4/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Validated
 public class CustomerController {
 

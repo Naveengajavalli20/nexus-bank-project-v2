@@ -7,11 +7,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient("cards")
+@FeignClient(name = "cards", fallback = CardsFallback.class)
 public interface CardsFeignClient {
 
-    @GetMapping(value = "/api/fetch",consumes = "application/json")
-    public ResponseEntity<CardsDto> fetchCardDetails(@RequestHeader("eazybank-correlation-id")
-                                                         String correlationId, @RequestParam String mobileNumber);
-
+    @GetMapping(value = "/v4/api/fetch", consumes = "application/json")
+    public ResponseEntity<CardsDto> fetchCardDetails(@RequestHeader("nexusbank-correlation-id")
+                                                     String correlationId, @RequestParam String mobileNumber);
 }

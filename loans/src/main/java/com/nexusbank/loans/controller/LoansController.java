@@ -26,7 +26,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author Eazy Bytes
+ * @author Naveen
  */
 
 @Tag(
@@ -34,7 +34,7 @@ import org.springframework.web.bind.annotation.*;
         description = "CRUD REST APIs in NexusBank to CREATE, UPDATE, FETCH AND DELETE loan details"
 )
 @RestController
-@RequestMapping(path = "/nexus-bank/loans", produces = {MediaType.APPLICATION_JSON_VALUE})
+@RequestMapping(path = "/v4/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Validated
 public class LoansController {
 
@@ -255,6 +255,7 @@ public class LoansController {
     )
     @GetMapping("/contact-info")
     public ResponseEntity<LoansContactInfoDto> getContactInfo() {
+        logger.debug("Invoked Loans contact info");
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(loansContactInfoDto);

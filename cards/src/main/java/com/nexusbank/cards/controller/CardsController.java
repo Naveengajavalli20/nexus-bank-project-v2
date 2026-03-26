@@ -26,7 +26,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author Eazy Bytes
+ * @author Naveen
  */
 
 @Tag(
@@ -34,7 +34,7 @@ import org.springframework.web.bind.annotation.*;
         description = "CRUD REST APIs in NexusBank to CREATE, UPDATE, FETCH AND DELETE card details"
 )
 @RestController
-@RequestMapping(path = "/nexus-bank/cards", produces = {MediaType.APPLICATION_JSON_VALUE})
+@RequestMapping(path = "/v4/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Validated
 public class CardsController {
 
