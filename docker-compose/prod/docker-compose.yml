@@ -12,8 +12,8 @@ services:
       service: network-deploy-service
 
   configserver:
-    image: "nexusbank/configserver:v4"
-    container_name: configserver-ms
+    image: "navs07/configserver:v4"
+    container_name: configserver
     ports:
       - "8071:8071"
     healthcheck:
@@ -27,8 +27,8 @@ services:
       service: microservice-base-config
 
   eurekaserver:
-    image: "nexusbank/eurekaserver:v2"
-    container_name: eurekaserver-ms
+    image: "navs07/eurekaserver:v2"
+    container_name: eurekaserver
     ports:
       - "8070:8070"
     depends_on:
@@ -47,8 +47,8 @@ services:
       SPRING_APPLICATION_NAME: "eurekaserver"
 
   accounts:
-    image: "nexusbank/accounts:v4"
-    container_name: accounts-ms
+    image: "navs07/accounts:v4"
+    container_name: accounts
     ports:
       - "8080:8080"
     depends_on:
@@ -69,8 +69,8 @@ services:
       service: microservice-eureka-config
 
   loans:
-    image: "nexusbank/loans:v4"
-    container_name: loans-ms
+    image: "navs07/loans:v4"
+    container_name: loans
     ports:
       - "8082:8082"
     depends_on:
@@ -91,8 +91,8 @@ services:
       service: microservice-eureka-config
 
   cards:
-    image: "nexusbank/cards:v4"
-    container_name: cards-ms
+    image: "navs07/cards:v4"
+    container_name: cards
     ports:
       - "8081:8081"
     depends_on:
@@ -113,8 +113,8 @@ services:
       service: microservice-eureka-config
 
   gatewayserver:
-    image: "nexusbank/gatewayserver:v1"
-    container_name: gatewayserver-ms
+    image: "navs07/gatewayserver:v1"
+    container_name: gatewayserver
     ports:
       - "8072:8072"
     depends_on:
