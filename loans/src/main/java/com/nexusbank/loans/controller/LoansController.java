@@ -55,8 +55,9 @@ public class LoansController {
                                                      @RequestParam
                                                      @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
                                                      String mobileNumber) {
-        logger.debug("nexusbank-correlation-id found: {} ", correlationId);
+        logger.debug("fetchLoanDetails method entered");
         LoansDto loansDto = iLoansService.fetchLoan(mobileNumber);
+        logger.debug("fetchLoanDetails method exit");
         return ResponseEntity.status(HttpStatus.OK).body(loansDto);
     }
 
